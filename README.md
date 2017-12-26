@@ -94,3 +94,7 @@ done in application settings, Permissions entry.
 * Switching mobile data on/off requires the phone to be rooted on Android 5.0+.
 Read [this](http://stackoverflow.com/questions/26539445/the-setmobiledataenabled-method-is-no-longer-callable-as-of-android-l-and-later)
 StackOveflow thread for more details.
+
+## License
+
+Apache License 2.0
