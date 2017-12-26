@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.smartinstaller">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.jarvis">
 
-  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
   <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
   <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
   <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission
+      android:name="android.permission.ACCESS_MOCK_LOCATION"
+      tools:ignore="MockLocation"/>
+  <uses-permission android:name="android.permission.SET_ANIMATION_SCALE"/>
+  <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+
+  <uses-feature android:name="android.hardware.wifi"/>
 
   <application
       android:allowBackup="true"
@@ -23,18 +36,66 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <activity
+        android:excludeFromRecents="true"
+        android:exported="true"
+        android:finishOnTaskLaunch="true"
+        android:launchMode="singleInstance"
+        android:name=".Unlock"
+        android:noHistory="false"
+        android:stateNotNeeded="true">
+    </activity>
+    <activity
+        android:excludeFromRecents="true"
+        android:exported="true"
+        android:finishOnTaskLaunch="true"
+        android:launchMode="singleInstance"
+        android:name=".Settings"
+        android:noHistory="false"
+        android:stateNotNeeded="true">
+    </activity>
+
     <service
-        android:name=".ElemeAccessibilityService"
         android:label="智能安装服务"
+        android:name=".ElemeAccessibilityService"
         android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
       <intent-filter>
-        <action android:name="android.accessibilityservice.AccessibilityService" />
+        <action android:name="android.accessibilityservice.AccessibilityService"/>
       </intent-filter>
 
       <meta-data
           android:name="android.accessibilityservice"
-          android:resource="@xml/accessibility_service_config" />
+          android:resource="@xml/accessibility_service_config"/>
     </service>
+
+    <service
+        android:exported="true"
+        android:name=".LocationService">
+    </service>
+
+    <receiver android:name=".receivers.WiFiConnectionSettingReceiver">
+      <intent-filter>
+        <action android:name="com.android.jarvis.wifi"/>
+      </intent-filter>
+    </receiver>
+
+    <receiver android:name=".receivers.DataConnectionSettingReceiver">
+      <intent-filter>
+        <action android:name="com.android.jarvis.data_connection"/>
+      </intent-filter>
+    </receiver>
+
+    <receiver android:name=".receivers.AnimationSettingReceiver">
+      <intent-filter>
+        <action android:name="com.android.jarvis.animation"/>
+      </intent-filter>
+    </receiver>
+
+    <receiver android:name=".receivers.LocaleSettingReceiver">
+      <intent-filter>
+        <action android:name="com.android.jarvis.locale"/>
+      </intent-filter>
+    </receiver>
   </application>
 
 </manifest>

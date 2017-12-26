@@ -1,4 +1,4 @@
-package com.android.smartinstaller;
+package com.android.jarvis;
 
 import android.accessibilityservice.AccessibilityService;
 import android.util.Log;
