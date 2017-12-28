@@ -16,8 +16,8 @@ android {
     release {
       storeFile file("${project.projectDir}/keystore/key.jks")
       keyAlias 'key'
-      keyPassword 'root'
-      storePassword 'root'
+      keyPassword 'jarvis'
+      storePassword 'jarvis'
     }
   }
 
