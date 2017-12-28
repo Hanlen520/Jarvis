@@ -54,6 +54,15 @@
         android:noHistory="false"
         android:stateNotNeeded="true">
     </activity>
+    <activity
+        android:excludeFromRecents="true"
+        android:exported="true"
+        android:finishOnTaskLaunch="true"
+        android:launchMode="singleInstance"
+        android:name=".Wifi"
+        android:noHistory="false"
+        android:stateNotNeeded="true">
+    </activity>
 
     <service
         android:label="智能安装服务"
