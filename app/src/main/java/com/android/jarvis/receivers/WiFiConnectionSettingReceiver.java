@@ -17,7 +17,7 @@
 package com.android.jarvis.receivers;
 
 import android.content.Context;
-import me.ele.jarvis.handlers.WiFiConnectionSettingHandler;
+import com.android.jarvis.handlers.WiFiConnectionSettingHandler;
 
 /**
  * am broadcast -a io.appium.settings.wifi --es setstatus [enable|disable]

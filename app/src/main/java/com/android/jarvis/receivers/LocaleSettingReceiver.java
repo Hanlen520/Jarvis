@@ -20,8 +20,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import com.android.jarvis.handlers.LocaleSettingHandler;
 import java.util.Locale;
-import me.ele.jarvis.handlers.LocaleSettingHandler;
 
 public class LocaleSettingReceiver extends BroadcastReceiver {
   private static final String TAG = LocaleSettingReceiver.class.getSimpleName();

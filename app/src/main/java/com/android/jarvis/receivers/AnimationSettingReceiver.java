@@ -17,7 +17,7 @@
 package com.android.jarvis.receivers;
 
 import android.content.Context;
-import me.ele.jarvis.handlers.AnimationSettingHandler;
+import com.android.jarvis.handlers.AnimationSettingHandler;
 
 /**
  * am broadcast -a io.appium.settings.animation --es setstatus [enable|disable]

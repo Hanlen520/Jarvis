@@ -17,7 +17,7 @@
 package com.android.jarvis.receivers;
 
 import android.content.Context;
-import me.ele.jarvis.handlers.DataConnectionSettingHandler;
+import com.android.jarvis.handlers.DataConnectionSettingHandler;
 
 /**
  * am broadcast -a io.appium.settings.data_connection --es setstatus [enable|disable]

@@ -21,9 +21,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import com.android.jarvis.handlers.AbstractSettingHandler;
 import java.util.Arrays;
 import java.util.List;
-import me.ele.jarvis.handlers.AbstractSettingHandler;
 
 public abstract class AbstractSettingReceiver extends BroadcastReceiver {
   private static final String TAG = AbstractSettingReceiver.class.getSimpleName();
