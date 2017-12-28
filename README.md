@@ -26,7 +26,15 @@ $ adb shell am start -n com.android.jarvis/.Unlock
 
 Your device or emulator is awake and unlocked!
 
-### 3、Settings
+### 3、Automatic detection of network status
+
+Automatically detects network status, automatically opens when wifi is closed
+
+```shell
+$ adb shell am start -n com.android.jarvis/.Wifi
+```
+
+### 4、Settings
 
 Toggle settings in Android device or emulator.
 
