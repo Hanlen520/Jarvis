@@ -1,3 +1,5 @@
+[![](https://travis-ci.org/logan62334/Jarvis.svg?branch=master)](https://travis-ci.org/logan62334/Jarvis)
+
 ## Jarvis
 
 Android automation support services
