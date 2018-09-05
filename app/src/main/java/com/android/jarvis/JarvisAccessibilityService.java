@@ -11,7 +11,7 @@ public class JarvisAccessibilityService extends AccessibilityService {
 
   Map<Integer, Boolean> handledMap = new HashMap<>();
 
-  public ElemeAccessibilityService() {
+  public JarvisAccessibilityService() {
   }
 
   @Override
