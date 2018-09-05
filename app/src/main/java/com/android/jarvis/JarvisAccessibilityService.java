@@ -7,7 +7,7 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AccessibilityService extends AccessibilityService {
+public class JarvisAccessibilityService extends AccessibilityService {
 
   Map<Integer, Boolean> handledMap = new HashMap<>();
 
